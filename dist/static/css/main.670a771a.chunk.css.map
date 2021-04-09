@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/common.less"],"names":[],"mappings":"AAAA,KACE,qBAEF,CAHA,gBAEE,aAIF","file":"main.670a771a.chunk.css","sourcesContent":[".app {\n  background-color: aqua;\n  color: #108ee9;\n  .test {\n    color: #108ee9;\n  }\n}\n"]}
