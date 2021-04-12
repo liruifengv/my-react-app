@@ -1,9 +1,10 @@
 import React from 'react'
+import { Counter } from '../features/counter/Counter'
 
 const Test = () => {
   return (
     <div className="P-login">
-        <h1>Test page</h1>
+        <Counter />
     </div>
   )
 }
