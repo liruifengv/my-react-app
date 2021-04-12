@@ -3,6 +3,7 @@ const path = require('path')
 const { whenDev } = require('@craco/craco')
 const fastRefreshCracoPlugin = require('craco-fast-refresh')
 const CracoLessPlugin = require('craco-less')
+const CracoAntDesignPlugin = require('craco-antd')
 const resolve = dir => path.resolve(__dirname, dir)
 
 module.exports = {
@@ -72,13 +73,18 @@ module.exports = {
       []
     ),
     {
+      plugin: CracoAntDesignPlugin
+    },
+    {
       plugin: CracoLessPlugin,
-      lessOptions: {
-        modifyLessRule: () => {
-          return {
-            test: /\.less$/,
-            use: ['style-loader', 'css-loader', 'less-loader']
-          }
+      options: {
+        cssLoaderOptions: {
+          modules: { localIdentName: '[local]_[hash:base64:5]' }
+        },
+        modifyLessRule: function (lessRule, _context) {
+          lessRule.test = /\.(module)?\.(less)$/
+          lessRule.exclude = path.join(__dirname, 'node_modules')
+          return lessRule
         }
       }
     }
