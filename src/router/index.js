@@ -4,6 +4,7 @@ const Home = React.lazy(() => import('@/pages/Home'))
 const Login = React.lazy(() => import('@/pages/Login'))
 const Test = React.lazy(() => import('@/pages/Test'))
 const NotFound = React.lazy(() => import('@/pages/NotFound'))
+const Posts = React.lazy(() => import('@/pages/Posts/Posts'))
 
 const toRedirect = () => {
   return (
@@ -19,9 +20,10 @@ const toNotFound = () => {
 
 const routes = [
   { path: '/', exact: true, render: toRedirect },
-  { path: '/Home', component: Home },
-  { path: '/Login', component: Login },
-  { path: '/Test', component: Test },
+  { path: '/home', component: Home },
+  { path: '/login', component: Login },
+  { path: '/test', component: Test },
+  { path: '/posts', component: Posts },
   { path: '/404', component: NotFound },
   { path: '*', render: toNotFound }
 ]

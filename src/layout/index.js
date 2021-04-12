@@ -30,6 +30,7 @@ const BasicLayout = (props) => {
         >
            <Menu.Item key="login">login</Menu.Item>
            <Menu.Item key="test">test</Menu.Item>
+           <Menu.Item key="posts">post</Menu.Item>
            <Menu.Item key="other">other</Menu.Item>
         </SubMenu>
       </Menu>

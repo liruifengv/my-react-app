@@ -93,7 +93,7 @@ module.exports = {
     port: 9000,
     proxy: {
       '/api': {
-        target: 'https://placeholder.com/',
+        target: 'http://sayhub.me/api',
         changeOrigin: true,
         secure: false,
         xfwd: false

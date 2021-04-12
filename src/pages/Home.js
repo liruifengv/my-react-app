@@ -7,9 +7,6 @@ const Home = () => {
   return (
     <div className="P-home">
       Home
-      {/* <AddTodo />
-      <VisibleTodoList />
-      <Footer /> */}
     </div>
   )
 }
