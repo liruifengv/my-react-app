@@ -93,7 +93,7 @@ module.exports = {
     port: 9000,
     proxy: {
       '/api': {
-        target: 'http://sayhub.me/api',
+        target: process.env.REACT_APP_PROXY,
         changeOrigin: true,
         secure: false,
         xfwd: false

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const baseUrl = 'http://sayhub.me/api'
+export const baseUrl = process.env.REACT_APP_PROXY
 
 // axios的实例及拦截器配置
 const request = axios.create({
