@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Skeleton } from 'antd'
 import BasicLayout from './layout'
 import routes from '@/router'
@@ -7,13 +7,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 function App () {
   return (
-    <Fragment>
-      <Router>
-        <BasicLayout>
-          <Suspense fallback={<Skeleton active />}>{renderRoutes(routes)}</Suspense>
-        </BasicLayout>
-      </Router>
-    </Fragment>
+    <Router>
+      <BasicLayout>
+        <Suspense fallback={<Skeleton active />}>{renderRoutes(routes)}</Suspense>
+      </BasicLayout>
+    </Router>
   )
 }
 
