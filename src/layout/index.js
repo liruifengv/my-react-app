@@ -7,9 +7,11 @@ import {
   MenuFoldOutlined,
   UserOutlined,
   VideoCameraOutlined,
-  UploadOutlined
+  UploadOutlined,
+  MailOutlined
 } from '@ant-design/icons'
 
+const { SubMenu } = Menu
 const { Header, Sider, Content } = Layout
 
 const BasicLayout = (props) => {
@@ -35,7 +37,10 @@ const BasicLayout = (props) => {
         <Menu theme="dark" mode="inline" defaultSelectedKeys={[selectedKey]} selectedKeys={[selectedKey]} onClick={clickMenu}>
           <Menu.Item key="/home" icon={<UserOutlined />}>Helloworld</Menu.Item>
           <Menu.Item key="/login" icon={<VideoCameraOutlined />}>login</Menu.Item>
-          <Menu.Item key="/test" icon={<UploadOutlined />}>test</Menu.Item>
+          <SubMenu key="/test" icon={<MailOutlined />} title="test">
+            <Menu.Item key="/test/list">list</Menu.Item>
+            <Menu.Item key="/test/detail">detail</Menu.Item>
+          </SubMenu>
           <Menu.Item key="/posts" icon={<UploadOutlined />}>post</Menu.Item>
         </Menu>
       </Sider>
