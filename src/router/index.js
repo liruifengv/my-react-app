@@ -10,7 +10,7 @@ const Posts = React.lazy(() => import('@/pages/Posts/Posts'))
 /* eslint-disable */
 const toRedirect = () => {
   return (
-    <Redirect to='/Home' />
+    <Redirect to='/home' />
   )
 }
 
